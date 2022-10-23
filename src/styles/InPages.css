@@ -1,0 +1,66 @@
+body {
+    background-color: rgba(7, 19, 217, 0.17);
+    font-family: "Asap", sans-serif;
+}
+
+.login {
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px 30px 30px 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+    margin: 200px auto;
+}
+
+.login > h4 {
+    font-weight: bolder;
+}
+
+.login > input {
+    font-family: "Asap", sans-serif;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px -10px;
+}
+.login > button {
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 80px;
+    border: 0;
+    padding: 10px 0;
+    /*margin-top: 10px;*/
+    /*margin-left: -5px;*/
+    border-radius: 5px;
+    background-color: darkblue;
+    display: block;
+    margin: 0 auto;
+}
+.login > button:hover {
+    background-color: lightblue;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 18px;
+    float: right;
+
+}
+
+p {
+    display: inline-block;
+}

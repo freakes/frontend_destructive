@@ -1,0 +1,476 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.App {
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header__nav {
+  min-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3333cc;
+  border-radius: 0 0 30px 30px;
+  padding: 12px 12px 12px 12px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.header__list-link {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.header__item-list-link {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.header__item-list-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header__link {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: white; /* Цвет обычной ссылки */
+  position: relative;
+  cursor: pointer;
+  text-decoration: none; /* Убираем подчеркивание */
+}
+.header__link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px; /* Высота линии */
+  background-color: #000099; /* Цвет подчеркивания при исчезании линии*/
+  transition: width 0.5s; /* Время эффекта */
+}
+
+.header__link:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px; /* Высота линии */
+  background-color: #33ccff; /* Цвет подчеркивания при появлении линии*/
+  transition: width 0.5s; /* Время эффекта */
+}
+
+.header__right-side {
+  display: flex;
+  align-items: center;
+}
+
+.header__user-name {
+  font-family: sans-serif;
+  float: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  padding-right: 50px;
+}
+
+.header__img-logout {
+  cursor: pointer;
+  height: 40px;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+}
+
+.header__img-logout:hover {
+  animation: bounce 1s;
+}
+
+.create__appeal_ico {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: inherit;
+  border: none;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+}
+
+.create__appeal_ico:hover {
+  animation: bounce 1s;
+}
+
+.header__img__user {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.news__item {
+  margin-top: 10px;
+  min-width: 300px;
+  border: 2px solid #3366ff;
+  border-radius: 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.news__item__date {
+  float: right;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.news__item__heading {
+  font-family: sans-serif;
+  margin-top: 0;
+  font-size: 35px;
+  font-weight: 600;
+  color: #003366;
+}
+
+.news__item__text {
+  display: block;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.news__item__tag {
+
+  display: inline-block;
+  text-align: right;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.news__item__redact__btn {
+  display: inline-block;
+  float: right;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.news__item__delete__btn {
+  display: inline-block;
+  float: right;
+  font-family: sans-serif;
+  margin-right: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+
+.news__item__add__btn {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: black;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  width: 120px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  background-image: linear-gradient(
+          to left,
+          transparent,
+          transparent 50%,
+          #003366 50%,
+          #003366
+  );
+  background-color: inherit;
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.25s ease-in;
+  font: 400 18px tahoma;
+  border: 1px solid #003366;
+}
+.news__item__add__btn:hover {
+  background-position: 0 0;
+  color: #fff;
+}
+
+.user__item div {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.user__item {
+  margin: 0 auto;
+  border: 2px solid deepskyblue;
+  /*border-radius: 10px;*/
+  margin-top: 10px;
+  width: 500px;
+}
+
+.user__item__id {
+  float: left;
+}
+.appeals__item__center {
+  display: grid;
+  place-items: center;
+  flex-wrap: wrap;
+}
+
+.appeals__item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #3366ff;
+  padding: 20px 20px;
+  width: 50%;
+}
+
+.appeals__item__name {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.appeals__item__date {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  float: right;
+  color: #787878;
+}
+
+.appeals__item__surname {
+  font-family: sans-serif;
+  font-size: 18px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.answer__text {
+
+  border: 2px solid green;
+  padding: 20px 20px;
+  font-family: sans-serif;
+  font-size: 18px;
+  width: 45%;
+}
+
+.create__news__form {
+  text-align: center !important;
+}
+
+.news__input {
+  border: none;
+  border-bottom: solid 2px #3366ff;
+  margin-bottom: 10px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+}
+
+.create__news__button {
+  cursor: pointer;
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  background-image: linear-gradient(
+          to left,
+          transparent,
+          transparent 50%,
+          #003366 50%,
+          #003366
+  );
+  background-color: inherit;
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.25s ease-in;
+  font: 400 13px tahoma;
+  border: 1px solid #003366;
+}
+.create__news__button:hover {
+  background-position: 0 0;
+  color: #fff;
+}
+
+.input__rector {
+  border: none;
+  border-bottom: solid 2px #3366ff;
+  margin-bottom: 10px;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+}
+
+
+.table__users {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.table__row__header {
+  background-color: blue;
+}
+
+.table__th {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 10px;
+  color: white;
+}
+
+.table__column {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.drop__area {
+  margin-top: 10px;
+  width: 100%;
+  height: 10vh;
+  border: 5px dashed darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drop__area_false {
+  margin-top: 10px;
+  width: 100%;
+  height: 10vh;
+  border: 3px solid darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule__center {
+  display: flex;
+  justify-content: center;
+}
+
+.schedule__container {
+  min-width: 600px;
+}
+
+.schedule__group__name {
+  margin-top: 30px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.schedule__day {
+  font-family: sans-serif;
+  font-weight: 600;
+  line-height: 25px;
+  font-size: 18px;
+  padding: 5px 15px;
+  margin-top: 20px;
+  border: 1px solid #000099;
+  border-radius: 18px;
+  color: white;
+  background-color: #000099;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.schedule__lesson__box {
+  padding: 20px 10px;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.schedule__lesson__name {
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  max-width: 450px;
+}
+
+.schedule__lesson__time {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  background-color: #33ccff;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 5px 5px;
+  box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.schedule__lesson__place {
+  color: #787878;
+  font-size: 16px;
+}
